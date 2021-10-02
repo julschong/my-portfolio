@@ -1,25 +1,15 @@
 :root {
-    --color-background-dark: #191727;
+    --color-background-dark: #090811;
+    --color-background-blue: #202757;
     --color-text-white: #eee;
-}
 
-/* width */
-::-webkit-scrollbar {
-    width: 1rem;
-}
+    --left-padding: 10rem;
+    --left-padding-logo: 5rem;
 
-/* width */
-::-webkit-scrollbar {
-    width: 20px;
-}
+    --font-size-lg: 3rem;
+    --font-size-md: 2rem;
+    --fontsize-sm: 1.5rem;
+    --fontsize-xs: 1rem;
 
-/* Track */
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
+    --container-size: 100rem;
 }
