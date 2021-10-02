@@ -3,7 +3,7 @@ import Game from './../Game/index';
 
 const Hero = ({ aboutRef }) => {
     return (
-        <div id="hero">
+        <main id="hero">
             <div className="hero-text">
                 Hello there, I'm{' '}
                 <span className="hero-text-name">Julius Lee</span>.
@@ -28,7 +28,7 @@ const Hero = ({ aboutRef }) => {
                 </div>
             </div>
             <Game />
-        </div>
+        </main>
     );
 };
 
