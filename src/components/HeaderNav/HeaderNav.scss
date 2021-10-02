@@ -1,0 +1,16 @@
+.nav {
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    width: calc(100vw - 20px);
+    color: var(--color-text-white);
+    margin-block: 10px;
+    margin-inline: 20px;
+
+    ul {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+}

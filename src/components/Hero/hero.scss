@@ -1,0 +1,18 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-white);
+    background-image: linear-gradient(#000, #202757);
+    font-size: 3rem;
+
+    .hero-text-name {
+        color: rgb(192, 95, 144);
+    }
+
+    .hero-subtext {
+        font-size: 2rem;
+    }
+}
