@@ -1,6 +1,7 @@
 import './Hero.scss';
 import Game from './../Game/index';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { FaArrowRight } from 'react-icons/fa';
+import { BsChevronDoubleDown } from 'react-icons/bs';
 import { useState } from 'react';
 
 const Hero = ({ aboutRef }) => {
@@ -23,7 +24,7 @@ const Hero = ({ aboutRef }) => {
                     onMouseLeave={(e) => setButtonHover(false)}
                 >
                     View My Work
-                    <AiOutlineArrowRight
+                    <FaArrowRight
                         size={24}
                         style={{
                             transform: buttonHover ? 'rotate(90deg)' : ''
@@ -40,6 +41,11 @@ const Hero = ({ aboutRef }) => {
                 </div>
             </div>
             <Game />
+            <BsChevronDoubleDown
+                id="hero-more-icon"
+                className="animate__animated animate__heartBeat animate__infinite"
+                size={40}
+            />
         </main>
     );
 };

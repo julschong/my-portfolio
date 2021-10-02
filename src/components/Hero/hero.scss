@@ -17,16 +17,21 @@
     user-select: none;
 
     .hero-button {
-        display: block;
+        display: flex;
+        align-items: center;
+
         margin-top: 1rem;
         padding-inline: 1rem;
         padding-block: 0.5rem;
+
         border: 2px solid var(--color-text-white);
         background-color: transparent;
-
         font-size: var(--fontsize-sm);
         color: var(--color-text-white);
+
         cursor: pointer;
+
+        transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
         svg {
             margin-left: 20px;
@@ -34,16 +39,27 @@
         }
     }
 
+    .hero-button:hover {
+        color: var(--color-secondar-pink);
+        border-color: var(--color-secondar-pink);
+    }
+
     .hero-text {
         z-index: 125;
     }
 
     .hero-text-name {
-        color: rgb(192, 95, 144);
+        color: var(--color-secondar-pink);
     }
 
     .hero-subtext {
         font-size: var(--font-size-md);
         margin-top: 50px;
+    }
+
+    #hero-more-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
     }
 }
