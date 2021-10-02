@@ -1,16 +1,30 @@
 .nav {
-    background-color: transparent;
-    position: fixed;
+    background-color: black;
     display: flex;
-    width: calc(100vw - 20px);
+
+    width: 100vw;
+    padding-block: 20px;
+    padding-inline: var(--left-padding-logo);
+
     color: var(--color-text-white);
-    margin-block: 10px;
-    margin-inline: 20px;
+    font-size: 1.5rem;
 
     ul {
         display: flex;
         flex: 1;
-        justify-content: flex-end;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-text-white);
+    }
+
+    a:hover {
+        color: rgb(177, 43, 177);
+    }
+
+    :visited {
+        color: var(--color-text-white);
     }
 }

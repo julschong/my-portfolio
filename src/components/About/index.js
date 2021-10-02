@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 const About = forwardRef((props, ref) => {
     return (
-        <main id="about" ref={ref}>
+        <section id="about" ref={ref}>
             <h2>About Me</h2>
             <p>
                 Hi there!
@@ -20,7 +20,7 @@ const About = forwardRef((props, ref) => {
                 fullstack developer and have been coding and learn everyday ever
                 since!
             </p>
-        </main>
+        </section>
     );
 });
 
