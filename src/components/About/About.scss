@@ -4,11 +4,40 @@
     align-items: center;
 
     min-height: 100vh;
-    padding-top: 50px;
-    max-width: 80%;
+    padding-block: 100px;
+    max-width: var(--container-width);
     margin: auto;
+
+    .about-title {
+        background-image: linear-gradient(black, black);
+        background-size: 100% 3px;
+        background-repeat: no-repeat;
+        background-position: bottom, left;
+    }
+
+    .about-container {
+        display: flex;
+        gap: calc(var(--container-width) * 0.03);
+
+        .profile-container {
+            width: 50%;
+            text-align: center;
+            .profile-pic {
+                width: 16rem;
+                border-radius: 50%;
+            }
+        }
+
+        .my-story {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+                sans-serif;
+            width: 50%;
+            line-height: 2rem;
+        }
+    }
 
     > h2 {
         font-size: var(--font-size-md);
+        margin-bottom: 100px;
     }
 }
