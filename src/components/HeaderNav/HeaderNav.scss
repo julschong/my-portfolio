@@ -1,10 +1,17 @@
 .nav {
     background-color: black;
     display: flex;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transition: transform 0.5s ease-in-out;
 
     width: 100vw;
+    height: 75px;
     padding-block: 20px;
-    padding-inline: var(--left-padding-logo);
+    padding-inline: var(--container-left-margin);
 
     color: var(--color-text-white);
     font-size: 1.5rem;
@@ -27,4 +34,8 @@
     :visited {
         color: var(--color-text-white);
     }
+}
+
+.nav-space-holder {
+    height: 75px;
 }
