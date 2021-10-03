@@ -1,12 +1,9 @@
 #hero {
-    min-height: 100vh;
     width: 100%;
-    padding-top: 100px;
+    min-height: 100vh;
+    padding-block: 100px;
+
     padding-left: var(--left-padding);
-    background-image: linear-gradient(
-        var(--color-background-dark),
-        var(--color-background-blue)
-    );
 
     display: flex;
     position: relative;
@@ -16,11 +13,13 @@
 
     user-select: none;
 
+    animation: bg-color-change 30s ease-in-out infinite alternate;
+
     .hero-button {
         display: flex;
         align-items: center;
 
-        margin-top: 1rem;
+        margin-top: 3rem;
         padding-inline: 1rem;
         padding-block: 0.5rem;
 
@@ -31,7 +30,7 @@
 
         cursor: pointer;
 
-        transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
 
         svg {
             margin-left: 20px;
@@ -40,8 +39,7 @@
     }
 
     .hero-button:hover {
-        color: var(--color-secondar-pink);
-        border-color: var(--color-secondar-pink);
+        background-color: var(--color-secondary-cyan);
     }
 
     .hero-text {
@@ -49,7 +47,9 @@
     }
 
     .hero-text-name {
-        color: var(--color-secondar-pink);
+        font-weight: 600;
+        text-shadow: 3px 4px 5px rgb(165, 76, 76), 3px 4px 5px rgb(89, 119, 119);
+        color: var(--color-secondary-cyan);
     }
 
     .hero-subtext {
@@ -57,9 +57,50 @@
         margin-top: 50px;
     }
 
+    .hero-hobby-container {
+        .hero-hobby {
+            line-height: 3rem;
+            position: relative;
+            width: fit-content;
+            background-image: var(--color-gradient-rainbow);
+            background-size: 0% 3px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 0.3s ease-in-out;
+
+            cursor: pointer;
+        }
+        .hero-hobby:hover,
+        .hero-hobby:focus {
+            background-size: 100% 3px;
+        }
+    }
+
     #hero-more-icon {
         position: absolute;
         bottom: 10px;
         left: 50%;
     }
+}
+
+@keyframes bg-color-change {
+    0% {
+        background-color: var(--color-background-blue);
+    }
+    50% {
+        background-color: var(--color-background-cyan);
+    }
+    100% {
+        background-color: var(--color-background-purple);
+    }
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(black, rgba(255, 255, 255, 0));
 }

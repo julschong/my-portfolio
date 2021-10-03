@@ -10,11 +10,20 @@ const Hero = ({ aboutRef }) => {
     return (
         <main id="hero">
             <div className="hero-text">
-                Hello there, I'm{' '}
-                <span className="hero-text-name">Julius Lee</span>.
+                Hello there,
+                <br />
+                I'm <span className="hero-text-name">Julius Lee</span>.
                 <br />
                 I'm a passionate, self taught fullstack developer!
                 <br />
+                <div className="hero-subtext">
+                    I also love to
+                    <ul className="hero-hobby-container">
+                        <li className="hero-hobby">3D Print</li>
+                        <li className="hero-hobby">Play Basketball</li>
+                        <li className="hero-hobby">Play with My Cats</li>
+                    </ul>
+                </div>
                 <button
                     className="hero-button"
                     onClick={() => {
@@ -31,14 +40,6 @@ const Hero = ({ aboutRef }) => {
                         }}
                     />
                 </button>
-                <div className="hero-subtext">
-                    I also love
-                    <ul>
-                        <li>3D Printing</li>
-                        <li>Basketball</li>
-                        <li>My two cats</li>
-                    </ul>
-                </div>
             </div>
             <Game />
             <BsChevronDoubleDown
