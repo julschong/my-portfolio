@@ -6,6 +6,7 @@ const Game = () => {
     const canvasRef = useRef();
     const mouseX = useRef(0);
     const mouseY = useRef(0);
+    const scrollY = useRef(0);
 
     useEffect(() => {
         console.dir(canvasRef.current);
@@ -21,6 +22,10 @@ const Game = () => {
             mouseX.current = e.clientX;
             mouseY.current = e.clientY;
         });
+
+        window.addEventListener('scroll', (e) => {
+            scrollY.current = window.scrollY;
+        });
     }, []);
 
     useEffect(() => {
@@ -28,9 +33,8 @@ const Game = () => {
         const context = canvas.getContext('2d');
         let animationFrameId;
 
-        //Our draw came here
         const render = () => {
-            draw(context, 100, mouseX.current, mouseY.current);
+            draw(context, 100, mouseX.current, mouseY.current, scrollY.current);
             animationFrameId = window.requestAnimationFrame(render);
         };
         render();
