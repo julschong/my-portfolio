@@ -1,10 +1,10 @@
 import './About.scss';
-import { forwardRef, useRef } from 'react';
+import { forwardRef } from 'react';
 import { useInViewport } from 'react-in-viewport';
 
 import profile from '../../asset/profile.jpg';
 import { animationInView } from './../../utils/animationInView';
-import Skill from '../Skill';
+import Skill from '../../components/Skill';
 
 const About = forwardRef((props, ref) => {
     // Trigger if 200px is visible from the element

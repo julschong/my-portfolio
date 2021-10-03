@@ -1,5 +1,5 @@
 import './Hero.scss';
-import Game from './../Game/index';
+import Game from '../../components/Game/index';
 import { FaArrowRight } from 'react-icons/fa';
 import { BsChevronDoubleDown } from 'react-icons/bs';
 import { forwardRef, useState } from 'react';

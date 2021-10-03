@@ -1,12 +1,12 @@
-import HeaderNav from './components/HeaderNav';
-import Hero from './components/Hero/index';
-import About from './components/About/index';
-import Project from './components/Project/index';
-import Contact from './components/Contact/index';
-import Footer from './components/Footer/index';
+import HeaderNav from './sections/HeaderNav';
+import Hero from './sections/Hero/index';
+import About from './sections/About/index';
+import Project from './sections/Project/index';
+import Contact from './sections/Contact/index';
+import Footer from './sections/Footer/index';
 
 import './App.scss';
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
 
 function App() {
     const heroRef = useRef();
