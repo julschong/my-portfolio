@@ -1,10 +1,16 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './HeaderNav.scss';
 
 const HeaderNav = (props) => {
     const navRef = useRef();
+    const [scrollY, setScrollY] = useState(0);
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setScrollY(window.scrollY);
+        });
+    }, []);
 
-    if (navRef.current && window.scrollY > navRef.current.offsetTop) {
+    if (navRef.current && scrollY > navRef.current.offsetTop) {
         return (
             <>
                 <div className="nav-space-holder" ref={navRef}></div>
