@@ -13,28 +13,6 @@ const HeaderNav = forwardRef((props, ref) => {
         });
     }, []);
 
-    if (navRef.current && pageYOffset > navRef.current.offsetTop) {
-        return (
-            <>
-                <div className="nav-space-holder" ref={navRef}></div>
-                <nav
-                    className="nav"
-                    style={{
-                        position: 'fixed'
-                    }}
-                >
-                    <NavList
-                        heroRef={heroRef}
-                        aboutRef={aboutRef}
-                        projectRef={projectRef}
-                        contactRef={contactRef}
-                        scrollY={pageYOffset}
-                    />
-                </nav>
-            </>
-        );
-    }
-
     return (
         <nav className="nav" ref={navRef}>
             <NavList
