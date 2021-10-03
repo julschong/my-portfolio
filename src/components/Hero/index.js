@@ -2,13 +2,13 @@ import './Hero.scss';
 import Game from './../Game/index';
 import { FaArrowRight } from 'react-icons/fa';
 import { BsChevronDoubleDown } from 'react-icons/bs';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 
-const Hero = ({ aboutRef }) => {
+const Hero = forwardRef(({ aboutRef }, ref) => {
     const [buttonHover, setButtonHover] = useState();
 
     return (
-        <main id="hero">
+        <main ref={ref} id="hero">
             <div className="hero-text">
                 Hello there,
                 <br />
@@ -49,6 +49,6 @@ const Hero = ({ aboutRef }) => {
             />
         </main>
     );
-};
+});
 
 export default Hero;

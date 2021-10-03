@@ -1,7 +1,8 @@
 import './Contact.scss';
 import { useFormik } from 'formik';
+import { forwardRef } from 'react';
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -13,7 +14,7 @@ const Contact = () => {
         }
     });
     return (
-        <section id="contact">
+        <section id="contact" ref={ref}>
             <form onSubmit={formik.handleSubmit}>
                 <label htmlFor="firstName">First Name</label>
                 <input
@@ -46,6 +47,6 @@ const Contact = () => {
             </form>
         </section>
     );
-};
+});
 
 export default Contact;

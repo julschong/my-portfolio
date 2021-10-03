@@ -22,12 +22,16 @@
         gap: 2rem;
     }
 
-    a {
+    button {
+        font-size: var(--font-size-sm);
         text-decoration: none;
         color: var(--color-text-white);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 
-    a:hover {
+    button:hover {
         color: rgb(177, 43, 177);
     }
 

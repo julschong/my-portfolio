@@ -40,6 +40,7 @@
 
     .hero-button:hover {
         background-color: var(--color-secondary-cyan);
+        border-color: var(--color-secondary-cyan);
     }
 
     .hero-text {
@@ -48,7 +49,8 @@
 
     .hero-text-name {
         font-weight: 600;
-        text-shadow: 3px 4px 5px rgb(165, 76, 76), 3px 4px 5px rgb(89, 119, 119);
+        text-shadow: 0.025em 0.025em 0 rgb(165, 76, 76),
+            0.05em 0.05em 0 rgb(43, 57, 179), 0.075em 0.075em 0 rgb(179, 43, 43);
         color: var(--color-secondary-cyan);
     }
 

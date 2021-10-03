@@ -9,14 +9,23 @@ import './App.scss';
 import { useRef, useEffect, useState } from 'react';
 
 function App() {
+    const heroRef = useRef();
+    const projectRef = useRef();
     const aboutRef = useRef();
+    const contactRef = useRef();
+
     return (
         <div className="app">
-            <Hero aboutRef={aboutRef} />
-            <HeaderNav />
+            <Hero ref={heroRef} aboutRef={aboutRef} />
+            <HeaderNav
+                heroRef={heroRef}
+                aboutRef={aboutRef}
+                contactRef={contactRef}
+                projectRef={projectRef}
+            />
             <About ref={aboutRef} />
-            <Project />
-            <Contact />
+            <Project ref={projectRef} />
+            <Contact ref={contactRef} />
             <Footer />
         </div>
     );

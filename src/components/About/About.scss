@@ -2,17 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none;
 
     min-height: 100vh;
     padding-block: 100px;
     max-width: var(--container-width);
     margin: auto;
 
-    .about-title {
+    .about-title::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: translateY(2px);
         background-image: linear-gradient(black, black);
-        background-size: 100% 3px;
+        background-size: 60% 4px;
         background-repeat: no-repeat;
-        background-position: bottom, left;
+        background-position: bottom, center;
     }
 
     .about-container {
