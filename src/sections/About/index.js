@@ -19,9 +19,9 @@ const About = forwardRef((props, ref) => {
     );
 
     return (
-        <section id="about" ref={ref}>
+        <section id="about" className="section-container" ref={ref}>
             <h2
-                className={`about-title ${animationInView(
+                className={`about-title title ${animationInView(
                     inViewport,
                     'animate__fadeInLeft',
                     enterCount,

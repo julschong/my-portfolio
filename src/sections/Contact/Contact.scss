@@ -1,4 +1,77 @@
 #contact {
-    min-height: 100vh;
-    padding-block: var(--padding-section-block);
+    .contact-title::after {
+        background-image: linear-gradient(
+            var(--color-text-dark),
+            var(--color-text-dark)
+        );
+    }
+
+    .title-caption {
+        color: var(--color-secondary-cyan);
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--margin-title-bottom-block);
+        font-weight: 700;
+    }
+
+    .contant-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: var(--container-width);
+        max-width: 800px;
+        gap: 20px;
+
+        padding: 50px;
+
+        color: var(--color-text-dark);
+        background-color: #f2f2f2;
+
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+        > input,
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            font-size: var(--font-size-xs);
+            border-radius: 5px;
+            transition: outline 0.5s ease-in-out;
+            outline: 3px solid transparent;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        > input:focus,
+        textarea:focus {
+            outline: 3px solid var(--color-secondary-cyan);
+        }
+
+        > textarea {
+            resize: none;
+            user-select: all;
+        }
+
+        .submit-button {
+            align-self: flex-end;
+            width: fit-content;
+            padding-inline: 3rem;
+            padding-block: 0.5rem;
+
+            border: 2px solid var(--color-text-white);
+            background-color: var(--color-secondary-cyan);
+            font-size: var(--font-size-sm);
+
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+            cursor: pointer;
+            color: var(--color-text-white);
+
+            transition: background-color 0.2s ease-in-out;
+        }
+        .submit-button:hover,
+        .submit-button:focus {
+            background-color: var(--color-secondary-cyan);
+            border-color: var(--color-secondary-cyan);
+        }
+    }
 }

@@ -5,11 +5,13 @@ const EachProject = ({ screenshot, year, name, desc }) => {
             <hr />
             <p className="project-name">{name}</p>
             <p className="project-desc">{desc}</p>
-            <img
-                className="project-picture"
-                src={screenshot}
-                alt={`${name} screenshot`}
-            />
+            <div className="image-container">
+                <img
+                    className="project-picture"
+                    src={screenshot}
+                    alt={`${name} screenshot`}
+                />
+            </div>
         </article>
     );
 };
