@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 const Project = forwardRef((props, ref) => {
     return (
-        <section id="contact" ref={ref}>
+        <section id="project" ref={ref}>
             Project
         </section>
     );

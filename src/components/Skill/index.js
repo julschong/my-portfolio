@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
+import { animationInView } from '../../utils/animationInView';
 import './Skill.scss';
 
 const skills = [
@@ -19,17 +22,37 @@ const skills = [
     'postman'
 ];
 
-const Skill = () => {
+const Skill = (props) => {
+    const myRef = useRef();
+    const { inViewport, enterCount } = useInViewport(
+        myRef,
+        {},
+        { disconnectOnLeave: false },
+        props
+    );
+
     return (
-        <div className="skill">
-            <h2>Language and Tools I have worked with</h2>
+        <div ref={myRef} className="skill">
+            <h2
+                className={`${animationInView(
+                    inViewport,
+                    'animate__fadeInDown',
+                    enterCount
+                )} animate__delay-1s`}
+            >
+                Language and Tools I have worked with
+            </h2>
             <div className="skill-list">
                 {skills.map((el, i) => (
-                    <div>
+                    <div key={el + i}>
                         <img
+                            className={`${animationInView(
+                                inViewport,
+                                'animate__fadeInUp',
+                                enterCount
+                            )} animate__delay-${(i % 3) + 1}s`}
                             src={`/skills/${el}.svg`}
                             alt=""
-                            key={el + i}
                             width={60}
                         />
                     </div>

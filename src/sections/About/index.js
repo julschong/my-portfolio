@@ -40,6 +40,11 @@ const About = forwardRef((props, ref) => {
                         src={profile}
                         alt="my-profile"
                     />
+                    <p className="profile-caption">
+                        My name is Julius Lee.
+                        <br />
+                        I'm an aspiring self movtivated Fullstack Developer.
+                    </p>
                 </div>
                 <p
                     className={`my-story ${animationInView(

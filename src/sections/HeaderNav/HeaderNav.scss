@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
 
+    border-bottom: 5px solid var(--color-lighter-blue);
+
     top: 0;
     left: 0;
     z-index: 200;
@@ -14,7 +16,7 @@
     padding-inline: var(--container-left-margin);
 
     color: var(--color-text-white);
-    font-size: 1.5rem;
+    font-size: var(--font-size-sm);
 
     ul {
         display: flex;

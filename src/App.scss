@@ -4,28 +4,78 @@
     --color-background-purple: #34285e;
     --color-background-cyan: rgb(17, 85, 94);
 
+    --color-lighter-blue: #2d44d8;
+    --color-lighter-purple: #5d48a8;
+    --color-lighter-cyan: rgb(31, 152, 168);
+
     --color-text-white: #eee;
-    --color-secondary-pink: #01a1a7;
+    --color-text-dark: #1d1d1d;
+    --color-secondary-pink: #a70175;
     --color-secondary-cyan: #01a1a7;
     --color-gradient-rainbow: linear-gradient(90deg, red, yellow, green, blue);
 
     --left-padding: 10rem;
     --left-padding-logo: 5rem;
+    --padding-section-block: 100px;
 
+    --font-size-xl: 3.5rem;
     --font-size-lg: 3rem;
-    --font-size-md: 2rem;
-    --fontsize-sm: 1.5rem;
-    --fontsize-xs: 1rem;
+    --font-size-md: 2.5rem;
+    --font-size-sm: 1.5rem;
+    --font-size-xs: 1rem;
 
     --container-width: 80vw;
-    // --container-left-margin: calc((100vw - var(--container-width)) / 2);
     --container-left-margin: 10vw;
 
     --animate-delay: 0.25s;
+
+    #hero-game {
+        display: none;
+    }
 }
 
 // Utility Classes
 
 .flex {
     display: flex;
+}
+
+@media (max-width: 960px) {
+    :root {
+        --padding-section-block: 65px;
+        --left-padding: 50px;
+        --left-padding-logo: 50px;
+
+        --font-size-lg: 2.25rem;
+        --font-size-md: 1.75rem;
+        --font-size-sm: 1.25rem;
+        --font-size-xs: 1rem;
+
+        --container-width: 90vw;
+        --container-left-margin: 20px;
+    }
+
+    #about {
+        .about-container.about-container {
+            flex-direction: column;
+            > * {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    :root {
+        --padding-section-block: 50px;
+        --left-padding: 15px;
+        --left-padding-logo: 15px;
+
+        --font-size-lg: 2rem;
+        --font-size-md: 1.5rem;
+        --font-size-sm: 1rem;
+        --font-size-xs: 0.75rem;
+
+        --container-width: 80vw;
+        --container-left-margin: 15px;
+    }
 }

@@ -5,9 +5,11 @@
     user-select: none;
 
     min-height: 100vh;
-    padding-block: 100px;
+    padding-block: var(--padding-section-block);
     max-width: var(--container-width);
     margin: auto;
+
+    color: var(--color-text-dark);
 
     .about-title::after {
         content: '';
@@ -35,6 +37,10 @@
                 width: 16rem;
                 border-radius: 50%;
             }
+
+            .profile-caption {
+                font-size: var(--font-size-xs);
+            }
         }
 
         .my-story {
@@ -42,7 +48,7 @@
                 sans-serif;
             width: 60%;
             line-height: 2rem;
-            font-size: var(--fontsize-sm);
+            font-size: var(--font-size-sm);
         }
     }
 

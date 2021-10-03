@@ -8,13 +8,15 @@
     .skill-list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+
         div {
-            flex: 0 0 20%;
+            flex: 0 0 120px;
             text-align: center;
         }
 
         img {
-            width: max(5vw, 60px);
+            width: 50%;
         }
     }
 }
