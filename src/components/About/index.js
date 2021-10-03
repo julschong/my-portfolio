@@ -1,25 +1,70 @@
 import './About.scss';
-import { forwardRef } from 'react';
+import { forwardRef, useRef } from 'react';
+import { useInViewport } from 'react-in-viewport';
+
+import profile from '../../asset/profile.jpg';
+import { animationInView } from './../../utils/animationInView';
+import Skill from '../Skill';
 
 const About = forwardRef((props, ref) => {
+    // Trigger if 200px is visible from the element
+
+    const { inViewport, enterCount } = useInViewport(
+        ref,
+        null,
+        { disconnectOnLeave: false },
+        props
+    );
+
     return (
         <section id="about" ref={ref}>
-            <h2>About Me</h2>
-            <p>
-                Hi there!
-                <br />
-                Just a little bit of my background,
-                <br />I graduated from University of California, Riverside with
-                Electrical Engineering in 2015 where I first learned programming
-                with C++ and C and did quite a lot of Microcontroller
-                Programming. After I graduated, I started working as a
-                Procurement Engineer ever since. Then fast forward to two years
-                ago after I had a chance to use SQL at work, I fell in love with
-                solving complex problem with code, so I decided to start
-                teaching! I set a goal for myself to work towards becoming a
-                fullstack developer and have been coding and learn everyday ever
-                since!
-            </p>
+            <h2
+                className={`about-title ${animationInView(
+                    inViewport,
+                    'animate__fadeInLeft',
+                    enterCount
+                )} animate__delay-1s`}
+            >
+                About Me
+            </h2>
+            <div className="about-container">
+                <div
+                    className={`profile-container ${animationInView(
+                        inViewport,
+                        'animate__fadeInLeft',
+                        enterCount
+                    )} animate__delay-2s`}
+                >
+                    <img
+                        className="profile-pic"
+                        src={profile}
+                        alt="my-profile"
+                    />
+                </div>
+                <p
+                    className={`my-story ${animationInView(
+                        inViewport,
+                        'animate__fadeInRight',
+                        enterCount
+                    )} animate__delay-2s`}
+                >
+                    Hi there!
+                    <br />
+                    Just a little bit of my background,
+                    <br />I graduated from University of California, Riverside
+                    with Electrical Engineering in 2015 where I first learned
+                    programming with C++ and C and did quite a lot of
+                    Microcontroller Programming. After I graduated, I started
+                    working as a Procurement Engineer ever since. Then fast
+                    forward to two years ago after I had a chance to use SQL at
+                    work, I fell in love with solving complex problem with code,
+                    so I decided to start learning programming on my own! I set
+                    a goal for myself to work towards becoming a fullstack
+                    developer and have been coding and learning everyday ever
+                    since!
+                </p>
+            </div>
+            <Skill />
         </section>
     );
 });
