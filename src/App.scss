@@ -17,6 +17,7 @@
     --left-padding: 10rem;
     --left-padding-logo: 5rem;
     --padding-section-block: 100px;
+    --padding-title-bottom-block: 100px;
 
     --font-size-xl: 3.5rem;
     --font-size-lg: 3rem;
@@ -28,10 +29,6 @@
     --container-left-margin: 10vw;
 
     --animate-delay: 0.25s;
-
-    #hero-game {
-        display: none;
-    }
 }
 
 // Utility Classes
@@ -42,9 +39,9 @@
 
 @media (max-width: 960px) {
     :root {
-        --padding-section-block: 65px;
         --left-padding: 50px;
         --left-padding-logo: 50px;
+        --padding-title-bottom-block: 75px;
 
         --font-size-lg: 2.25rem;
         --font-size-md: 1.75rem;
@@ -66,9 +63,9 @@
 }
 @media (max-width: 600px) {
     :root {
-        --padding-section-block: 50px;
         --left-padding: 15px;
         --left-padding-logo: 15px;
+        --padding-title-bottom-block: 50px;
 
         --font-size-lg: 2rem;
         --font-size-md: 1.5rem;

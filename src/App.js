@@ -6,13 +6,26 @@ import Contact from './sections/Contact/index';
 import Footer from './sections/Footer/index';
 
 import './App.scss';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function App() {
     const heroRef = useRef();
     const projectRef = useRef();
     const aboutRef = useRef();
     const contactRef = useRef();
+
+    const [width, setWidth] = useState(window.innerWidth);
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        };
+    }, []);
+
+    let isMobile = width <= 768;
 
     return (
         <div className="app">
@@ -23,7 +36,7 @@ function App() {
                 contactRef={contactRef}
                 projectRef={projectRef}
             />
-            <About ref={aboutRef} />
+            <About ref={aboutRef} isMobile={isMobile} />
             <Project ref={projectRef} />
             <Contact ref={contactRef} />
             <Footer />

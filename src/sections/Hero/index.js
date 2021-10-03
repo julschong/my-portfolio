@@ -41,7 +41,7 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
                     />
                 </button>
             </div>
-            <Game />
+            {/* <Game /> */}
             <BsChevronDoubleDown
                 id="hero-more-icon"
                 className="animate__animated animate__heartBeat animate__infinite"

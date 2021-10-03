@@ -1,7 +1,12 @@
-export function animationInView(inViewport, animationType, enterCount) {
-    if (inViewport || enterCount > 0) {
+export function animationInView(
+    inViewport,
+    animationType,
+    enterCount,
+    isMobile
+) {
+    if ((inViewport || enterCount > 0) && !isMobile) {
         return `animate__animated ${animationType}`;
     }
 
-    return ``;
+    return `animate__animated`;
 }

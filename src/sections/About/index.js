@@ -9,6 +9,8 @@ import Skill from '../../components/Skill';
 const About = forwardRef((props, ref) => {
     // Trigger if 200px is visible from the element
 
+    const { isMobile } = props;
+
     const { inViewport, enterCount } = useInViewport(
         ref,
         null,
@@ -22,7 +24,8 @@ const About = forwardRef((props, ref) => {
                 className={`about-title ${animationInView(
                     inViewport,
                     'animate__fadeInLeft',
-                    enterCount
+                    enterCount,
+                    isMobile
                 )} animate__delay-1s`}
             >
                 About Me
@@ -32,7 +35,8 @@ const About = forwardRef((props, ref) => {
                     className={`profile-container ${animationInView(
                         inViewport,
                         'animate__fadeInLeft',
-                        enterCount
+                        enterCount,
+                        isMobile
                     )} animate__delay-2s`}
                 >
                     <img
@@ -50,7 +54,8 @@ const About = forwardRef((props, ref) => {
                     className={`my-story ${animationInView(
                         inViewport,
                         'animate__fadeInRight',
-                        enterCount
+                        enterCount,
+                        isMobile
                     )} animate__delay-2s`}
                 >
                     Hi there!
@@ -69,7 +74,7 @@ const About = forwardRef((props, ref) => {
                     since!
                 </p>
             </div>
-            <Skill />
+            <Skill isMobile={isMobile} />
         </section>
     );
 });

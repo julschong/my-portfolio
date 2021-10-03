@@ -23,6 +23,8 @@ const skills = [
 ];
 
 const Skill = (props) => {
+    const { isMobile } = props;
+
     const myRef = useRef();
     const { inViewport, enterCount } = useInViewport(
         myRef,
@@ -32,12 +34,13 @@ const Skill = (props) => {
     );
 
     return (
-        <div ref={myRef} className="skill">
+        <div className="skill" ref={myRef}>
             <h2
                 className={`${animationInView(
                     inViewport,
                     'animate__fadeInDown',
-                    enterCount
+                    enterCount,
+                    isMobile
                 )} animate__delay-1s`}
             >
                 Language and Tools I have worked with
@@ -49,7 +52,8 @@ const Skill = (props) => {
                             className={`${animationInView(
                                 inViewport,
                                 'animate__fadeInUp',
-                                enterCount
+                                enterCount,
+                                isMobile
                             )} animate__delay-${(i % 3) + 1}s`}
                             src={`/skills/${el}.svg`}
                             alt=""

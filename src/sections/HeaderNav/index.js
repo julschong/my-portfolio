@@ -6,14 +6,14 @@ const HeaderNav = forwardRef((props, ref) => {
     const { heroRef, aboutRef, projectRef, contactRef } = props;
 
     const navRef = useRef();
-    const [scrollY, setScrollY] = useState(0);
+    const [pageYOffset, setPageYOffset] = useState(0);
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            setScrollY(window.scrollY);
+            setPageYOffset(window.pageYOffset);
         });
     }, []);
 
-    if (navRef.current && scrollY > navRef.current.offsetTop) {
+    if (navRef.current && pageYOffset > navRef.current.offsetTop) {
         return (
             <>
                 <div className="nav-space-holder" ref={navRef}></div>
@@ -28,7 +28,7 @@ const HeaderNav = forwardRef((props, ref) => {
                         aboutRef={aboutRef}
                         projectRef={projectRef}
                         contactRef={contactRef}
-                        scrollY={scrollY}
+                        scrollY={pageYOffset}
                     />
                 </nav>
             </>
@@ -42,7 +42,7 @@ const HeaderNav = forwardRef((props, ref) => {
                 aboutRef={aboutRef}
                 projectRef={projectRef}
                 contactRef={contactRef}
-                scrollY={scrollY}
+                scrollY={pageYOffset}
             />
         </nav>
     );
