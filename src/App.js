@@ -6,7 +6,7 @@ import Contact from './components/Contact/index';
 import Footer from './components/Footer/index';
 
 import './App.scss';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 function App() {
     const aboutRef = useRef();
