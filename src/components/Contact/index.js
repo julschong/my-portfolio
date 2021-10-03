@@ -1,20 +1,49 @@
 import './Contact.scss';
+import { useFormik } from 'formik';
 
 const Contact = () => {
+    const formik = useFormik({
+        initialValues: {
+            firstName: '',
+            lastName: '',
+            email: ''
+        },
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2));
+        }
+    });
     return (
         <section id="contact">
-            Contact Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Culpa est dolorem, dolorum quod laboriosam obcaecati eligendi amet
-            enim pariatur ad soluta consequatur error. Cum dolorum nostrum porro
-            in commodi explicabo qui? Quidem nobis hic odit necessitatibus,
-            velit veniam voluptates saepe aut vero architecto ipsam dicta sed
-            tenetur deleniti minus molestias praesentium corrupti eligendi
-            laboriosam. In quasi laudantium magni nobis rerum dolorum omnis
-            molestias. Qui suscipit vel similique, possimus omnis doloremque
-            facilis cumque! Vel nemo deserunt itaque modi commodi! Assumenda
-            odio tenetur libero reiciendis animi veniam similique mollitia
-            tempore neque facere iste voluptas officia quos architecto ut id,
-            incidunt, enim nobis?
+            <form onSubmit={formik.handleSubmit}>
+                <label htmlFor="firstName">First Name</label>
+                <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.firstName}
+                />
+
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.lastName}
+                />
+
+                <label htmlFor="email">Email Address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
+                />
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     );
 };
