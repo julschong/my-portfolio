@@ -33,7 +33,16 @@ const Contact = forwardRef((props, ref) => {
     return (
         <section id="contact" ref={ref}>
             <div className="section-container">
-                <h2 className="contact-title title">CONTACT</h2>
+                <h2
+                    className={`contact-title title ${animationInView(
+                        inViewport,
+                        'animate__fadeInLeft',
+                        enterCount,
+                        isMobile
+                    )} animate__delay-1s`}
+                >
+                    CONTACT
+                </h2>
                 <Formik
                     initialValues={{
                         name: '',
@@ -55,7 +64,7 @@ const Contact = forwardRef((props, ref) => {
                                 'animate__fadeInLeft',
                                 enterCount,
                                 isMobile
-                            )} animate__delay-1s`}
+                            )} animate__delay-2s`}
                             autoComplete="off"
                             autoCorrect="off"
                             ref={viewPortRef}
