@@ -1,5 +1,5 @@
 import './Hero.scss';
-import Game from '../../components/Game/index';
+// import Game from '../../components/Game/index';
 import { FaArrowRight } from 'react-icons/fa';
 import { BsChevronDoubleDown } from 'react-icons/bs';
 import { forwardRef, useState } from 'react';
@@ -45,7 +45,7 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
             <BsChevronDoubleDown
                 id="hero-more-icon"
                 className="animate__animated animate__heartBeat animate__infinite"
-                size={80}
+                size={60}
             />
         </main>
     );

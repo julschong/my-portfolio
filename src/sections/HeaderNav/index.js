@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect, forwardRef } from 'react';
 import './HeaderNav.scss';
-import { useInViewport } from 'react-in-viewport';
 
 const HeaderNav = forwardRef((props, ref) => {
     const { heroRef, aboutRef, projectRef, contactRef } = props;

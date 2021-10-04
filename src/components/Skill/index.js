@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useInViewport } from 'react-in-viewport';
 import { animationInView } from '../../utils/animationInView';
 import './Skill.scss';
+import { BASE_URL } from './../../utils/url';
 
 const skills = [
     'java',
@@ -55,8 +56,8 @@ const Skill = (props) => {
                                 enterCount,
                                 isMobile
                             )} animate__delay-${(i % 3) + 1}s`}
-                            src={`/skills/${el}.svg`}
-                            alt=""
+                            src={`${BASE_URL}asset/${el}.svg`}
+                            alt={el}
                             width={60}
                         />
                     </div>

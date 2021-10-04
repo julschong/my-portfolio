@@ -51,8 +51,8 @@ function App() {
                 projectRef={projectRef}
             />
             <About ref={aboutRef} isMobile={isMobile} />
-            <Project ref={projectRef} />
-            <Contact ref={contactRef} />
+            <Project ref={projectRef} isMobile={isMobile} />
+            <Contact ref={contactRef} isMobile={isMobile} />
             <Footer />
         </div>
     );

@@ -51,8 +51,21 @@
             user-select: all;
         }
 
+        .field-error {
+            color: red;
+            align-self: flex-start;
+            transform: translate(5px, -15px);
+        }
+
+        .thank-you-message {
+            font-size: var(--font-size-sm);
+            color: var(--color-secondary-cyan);
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
         .submit-button {
-            align-self: flex-end;
             width: fit-content;
             padding-inline: 3rem;
             padding-block: 0.5rem;
