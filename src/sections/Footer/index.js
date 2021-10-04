@@ -26,13 +26,13 @@ const Footer = () => {
                     <AiFillLinkedin size={40} />
                 </a>
                 <a
-                    href="mailto:7julius.lee@gmail.com"
+                    href="https://formsubmit.co/el/cenake"
                     target="_blank"
                     rel="noreferrer"
                 >
                     <AiOutlineMail size={40} />
                 </a>
-                <a href="tel:5626069973" target="_blank" rel="noreferrer">
+                <a href="tel:5626069973">
                     <AiFillPhone size={40} />
                 </a>
             </div>

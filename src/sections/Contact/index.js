@@ -1,6 +1,6 @@
 import './Contact.scss';
 import { Field, Form, Formik } from 'formik';
-import { forwardRef, useRef } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 import axios from 'axios';
 
 import * as Yup from 'yup';
@@ -23,6 +23,8 @@ const Contact = forwardRef((props, ref) => {
     const { isMobile } = props;
 
     const viewPortRef = useRef();
+    const formRef = useRef();
+
     const { inViewport, enterCount } = useInViewport(
         viewPortRef,
         {},
@@ -30,9 +32,12 @@ const Contact = forwardRef((props, ref) => {
         props
     );
 
+    const [sent, setSent] = useState(false);
+    const [sentError, setSentError] = useState(false);
+
     return (
         <section id="contact" ref={ref}>
-            <div className="section-container">
+            <div className="section-container" ref={viewPortRef}>
                 <h2
                     className={`contact-title title ${animationInView(
                         inViewport,
@@ -50,11 +55,9 @@ const Contact = forwardRef((props, ref) => {
                         message: ''
                     }}
                     validationSchema={ContactSchema}
-                    onSubmit={(values) => {
-                        axios.post(
-                            'https://formsubmit.co/7julius.lee@gmail.com',
-                            values
-                        );
+                    onSubmit={(_values) => {
+                        setSent(true);
+                        formRef.current.submit();
                     }}
                 >
                     {({ errors, touched, isSubmitting }) => (
@@ -67,7 +70,10 @@ const Contact = forwardRef((props, ref) => {
                             )} animate__delay-2s`}
                             autoComplete="off"
                             autoCorrect="off"
-                            ref={viewPortRef}
+                            target="_blank"
+                            action="https://formsubmit.co/5c8387a86984fb2a85bad5475adbbeb5"
+                            method="POST"
+                            ref={formRef}
                         >
                             <p className="title-caption">
                                 Have a question or want to work together?
@@ -105,10 +111,25 @@ const Contact = forwardRef((props, ref) => {
                                 </div>
                             ) : null}
 
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New submission!"
+                            />
+                            <input
+                                type="hidden"
+                                name="_captcha"
+                                value="false"
+                            />
+                            <input
+                                type="hidden"
+                                name="_template"
+                                value="table"
+                            />
                             <button
                                 className="submit-button"
                                 type="submit"
-                                disabled={isSubmitting}
+                                disabled={isSubmitting || sentError}
                                 style={
                                     isSubmitting
                                         ? {
@@ -123,13 +144,23 @@ const Contact = forwardRef((props, ref) => {
                             <p
                                 className="thank-you-message"
                                 style={
-                                    isSubmitting
+                                    sent
                                         ? { display: 'inline', opacity: 1 }
                                         : undefined
                                 }
                             >
                                 Thank you for contacting me!
                                 <br />I will follow up with you shortly!
+                            </p>
+                            <p
+                                className="thank-you-message"
+                                style={
+                                    sentError
+                                        ? { display: 'inline', opacity: 1 }
+                                        : undefined
+                                }
+                            >
+                                Something happened, please try again!
                             </p>
                         </Form>
                     )}
