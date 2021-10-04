@@ -61,7 +61,7 @@
 
     .hero-hobby-container {
         .hero-hobby {
-            line-height: 3rem;
+            line-height: var(--font-size-lg);
             position: relative;
             width: fit-content;
             background-image: var(--color-gradient-rainbow);

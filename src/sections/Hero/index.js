@@ -9,14 +9,15 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
 
     return (
         <main ref={ref} id="hero">
-            <div className="hero-text">
+            <div className="hero-text animate__animated animate__fadeIn">
                 Hello there,
                 <br />
-                I'm <span className="hero-text-name">Julius Lee</span>.
+                I'm <span className="hero-text-name">Julius Lee</span>
+                .
                 <br />
-                I'm a passionate, self taught fullstack developer!
+                <span>I'm a passionate, self taught fullstack developer!</span>
                 <br />
-                <div className="hero-subtext">
+                <div className="hero-subtext animate__animated animate__fadeIn animate__delay-3s">
                     I also love to
                     <ul className="hero-hobby-container">
                         <li className="hero-hobby">3D Print</li>
@@ -25,7 +26,7 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
                     </ul>
                 </div>
                 <button
-                    className="hero-button"
+                    className="hero-button animate__animated animate__fadeIn animate__delay-5s"
                     onClick={() => {
                         aboutRef.current.scrollIntoView();
                     }}

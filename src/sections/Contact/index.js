@@ -1,9 +1,11 @@
 import './Contact.scss';
 import { Field, Form, Formik } from 'formik';
-import { forwardRef } from 'react';
+import { forwardRef, useRef } from 'react';
 import axios from 'axios';
 
 import * as Yup from 'yup';
+import { useInViewport } from 'react-in-viewport';
+import { animationInView } from './../../utils/animationInView';
 
 const ContactSchema = Yup.object().shape({
     name: Yup.string()
@@ -18,6 +20,16 @@ const ContactSchema = Yup.object().shape({
 });
 
 const Contact = forwardRef((props, ref) => {
+    const { isMobile } = props;
+
+    const viewPortRef = useRef();
+    const { inViewport, enterCount } = useInViewport(
+        viewPortRef,
+        {},
+        { disconnectOnLeave: false },
+        props
+    );
+
     return (
         <section id="contact" ref={ref}>
             <div className="section-container">
@@ -30,21 +42,23 @@ const Contact = forwardRef((props, ref) => {
                     }}
                     validationSchema={ContactSchema}
                     onSubmit={(values) => {
-                        axios
-                            .post(
-                                'https://formsubmit.co/7julius.lee@gmail.com',
-                                values
-                            )
-                            .then((res) =>
-                                alert(JSON.stringify(values, null, 2))
-                            );
+                        axios.post(
+                            'https://formsubmit.co/7julius.lee@gmail.com',
+                            values
+                        );
                     }}
                 >
                     {({ errors, touched, isSubmitting }) => (
                         <Form
-                            className="contant-form"
+                            className={`contact-form ${animationInView(
+                                inViewport,
+                                'animate__fadeInLeft',
+                                enterCount,
+                                isMobile
+                            )} animate__delay-1s`}
                             autoComplete="off"
                             autoCorrect="off"
+                            ref={viewPortRef}
                         >
                             <p className="title-caption">
                                 Have a question or want to work together?

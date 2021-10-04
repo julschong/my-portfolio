@@ -45,6 +45,8 @@ const Project = forwardRef((props, ref) => {
                         year="2021"
                         name="Snakey"
                         desc="Classic Snake Game Built with React / TypeScript / Express"
+                        demoLink="http://snakey-s3.s3-website-us-west-1.amazonaws.com/"
+                        gitHubLink="https://github.com/julschong/Snakey"
                         isMobile={isMobile}
                     />
                     <EachProject
@@ -53,6 +55,8 @@ const Project = forwardRef((props, ref) => {
                         name="JCellio"
                         desc="Drag and Drop Todo App Build with React / Node / PostgreSQL"
                         isMobile={isMobile}
+                        demoLink="https://jcellio.netlify.app/dashboard"
+                        gitHubLink="https://github.com/julschong/JCellio"
                     />
                     <EachProject
                         screenshot={jchat}
@@ -60,6 +64,8 @@ const Project = forwardRef((props, ref) => {
                         name="JC Chat"
                         desc="Retro Chat Room built with React / Typescript / Node / Socket.io"
                         isMobile={isMobile}
+                        demoLink="http://jc-chat-app.s3-website-us-west-1.amazonaws.com/"
+                        gitHubLink="https://github.com/julschong/chat-app"
                     />
                     <EachProject
                         screenshot={hangman}
@@ -67,6 +73,8 @@ const Project = forwardRef((props, ref) => {
                         name="Hangman"
                         desc="Hangman mini-game built with React"
                         isMobile={isMobile}
+                        demoLink="https://hangman-julschong.netlify.app/"
+                        gitHubLink="https://github.com/julschong/hangman-game"
                     />
                 </div>
             </div>

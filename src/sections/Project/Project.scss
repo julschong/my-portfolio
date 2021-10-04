@@ -25,10 +25,10 @@
             flex-direction: column;
 
             .project-name {
-                font-size: var(--font-size-md);
+                font-size: var(--font-size-sm);
             }
             .project-desc {
-                font-size: var(--font-size-sm);
+                font-size: var(--font-size-xs);
             }
             .image-container {
                 margin-top: 20px;
@@ -36,6 +36,8 @@
                 aspect-ratio: 1.25;
                 border: 3px solid white;
                 align-self: center;
+                position: relative;
+                cursor: pointer;
             }
             .project-picture {
                 width: 100%;
@@ -43,11 +45,51 @@
                 object-fit: cover;
                 object-position: left;
             }
+
+            .project-modal {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background-color: rgba(0, 0, 0, 0.3);
+                transition: opacity 0.3s ease-in-out;
+
+                .project-modal-link-group {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 10%;
+                    a {
+                        font-size: var(--font-size-sm);
+                        text-decoration: none;
+                        color: var(--color-text-white);
+                        background-color: rgb(48, 68, 122);
+                        padding-block: 0.5rem;
+                        padding-inline: 3rem;
+                        border-radius: 30px;
+                        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+
+                        transition: background-color 1s ease-in-out;
+                    }
+                    a:hover,
+                    a:focus {
+                        background-color: var(--color-secondary-cyan);
+                    }
+                    a:active {
+                        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+                        transform: translateY(2px);
+                    }
+                }
+            }
         }
     }
 }
 
-#project::before {
+#project-inner-container::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -60,7 +102,7 @@
     transform: translateY(-25px) skewY(-5deg);
 }
 
-#project::after {
+#project-inner-container::after {
     content: '';
     position: absolute;
     z-index: -1;
