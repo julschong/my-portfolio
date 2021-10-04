@@ -59,19 +59,17 @@ const About = forwardRef((props, ref) => {
                     )} animate__delay-2s`}
                 >
                     Hi there!
-                    <br />
-                    Just a little bit of my background,
                     <br />I graduated from University of California, Riverside
-                    with Electrical Engineering in 2015 where I first learned
-                    programming with C++ and C and did quite a lot of
-                    Microcontroller Programming. After I graduated, I started
-                    working as a Procurement Engineer ever since. Then fast
-                    forward to two years ago after I had a chance to use SQL at
-                    work, I fell in love with solving complex problem with code,
-                    so I decided to start learning programming on my own! I set
-                    a goal for myself to work towards becoming a fullstack
-                    developer and have been coding and learning everyday ever
-                    since!
+                    with a degree in Electrical Engineering in 2015. That's
+                    where I first learned programming with C++ and C, and I also
+                    worked on quite a bit of Microcontroller Programming. With
+                    my degree, I began my career as a Procurement Engineer, but
+                    in 2019 I had a chance to use SQL at work and fell in love
+                    with solving complex problems with code. From that
+                    experience on, I began learning programming on my own. I
+                    developed a new goal to work towards becoming a fullstack
+                    developer, and I haven't gone a day without coding and
+                    learning ever since!
                 </p>
             </div>
             <Skill isMobile={isMobile} />

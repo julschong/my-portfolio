@@ -102,7 +102,6 @@ const Contact = forwardRef((props, ref) => {
                                 placeholder="You message..."
                                 as="textarea"
                                 rows="10"
-                                maxLength={255}
                                 spellCheck={false}
                             />
                             {errors.message && touched.message ? (
