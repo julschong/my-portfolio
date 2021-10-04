@@ -1,7 +1,6 @@
 import './Contact.scss';
 import { Field, Form, Formik } from 'formik';
 import { forwardRef, useRef, useState } from 'react';
-import axios from 'axios';
 
 import * as Yup from 'yup';
 import { useInViewport } from 'react-in-viewport';
@@ -33,7 +32,7 @@ const Contact = forwardRef((props, ref) => {
     );
 
     const [sent, setSent] = useState(false);
-    const [sentError, setSentError] = useState(false);
+    const [sentError] = useState(false);
 
     return (
         <section id="contact" ref={ref}>
@@ -56,7 +55,8 @@ const Contact = forwardRef((props, ref) => {
                     }}
                     validationSchema={ContactSchema}
                     onSubmit={(_values) => {
-                        setSent(true);
+                        setTimeout(() => setSent(true), 1000);
+
                         formRef.current.submit();
                     }}
                 >

@@ -50,7 +50,7 @@ const Skill = (props) => {
                 {skills.map((el, i) => (
                     <div key={el + i}>
                         <img
-                            className={`${animationInView(
+                            className={`skill-icon ${animationInView(
                                 inViewport,
                                 'animate__fadeInUp',
                                 enterCount,
@@ -58,7 +58,6 @@ const Skill = (props) => {
                             )} animate__delay-${(i % 3) + 1}s`}
                             src={`${BASE_URL}asset/${el}.svg`}
                             alt={el}
-                            width={60}
                         />
                     </div>
                 ))}

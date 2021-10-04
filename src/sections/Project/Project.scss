@@ -1,4 +1,5 @@
 #project {
+    position: relative;
     color: var(--color-text-white);
     background-color: var(--color-background-dark);
 
@@ -89,29 +90,29 @@
     }
 }
 
-#project-inner-container::before {
+#project::before {
     content: '';
     position: absolute;
     z-index: -1;
 
-    top: 0;
+    top: -20px;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 20vw;
     background-color: var(--color-background-dark);
-    transform: translateY(-25px) skewY(-5deg);
+    transform: skewY(-10deg);
 }
 
-#project-inner-container::after {
+#project::after {
     content: '';
     position: absolute;
     z-index: -1;
 
-    top: 0;
+    top: -20px;
     left: 0;
     width: 100%;
-    height: 200px;
+    height: 20vw;
     background-color: var(--color-background-dark);
 
-    transform: translateY(0px) skewY(3deg);
+    transform: translateY(0px) skewY(10deg);
 }
