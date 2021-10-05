@@ -21,7 +21,7 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
 
     useEffect(() => {
         if (!inViewport) {
-            setSVG('');
+            setSVG('3dprint');
         }
     }, [inViewport]);
 
@@ -83,10 +83,10 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
             </div>
             {/* <Game /> */}
             {svg === '3dprint' && (
-                <Print className="hero-illustration animate__animated animate__fadeInUp " />
+                <Print className="hero-illustration animate__animated animate__fadeInRight " />
             )}
             {svg === 'basketball' && (
-                <Hoop className="hero-illustration animate__animated animate__fadeInUp " />
+                <Hoop className="hero-illustration animate__animated animate__fadeInLeft " />
             )}
             {svg === 'cat' && <PhotoFrame />}
             <BsChevronDoubleDown
