@@ -33,7 +33,7 @@ const EachProject = (props) => {
     return (
         <article
             ref={viewPortRef}
-            className={`project-card animated__animated ${animationInView(
+            className={`project-card ${animationInView(
                 inViewport,
                 'animate__fadeInRight',
                 enterCount,
@@ -55,10 +55,17 @@ const EachProject = (props) => {
                     alt={`${name} screenshot`}
                 />
                 <div
-                    className="project-modal"
-                    style={!modal ? { opacity: 0 } : { opcaity: 1 }}
+                    className={`project-modal`}
+                    style={modal ? { opacity: 1 } : undefined}
                 >
-                    <div className="project-modal-link-group">
+                    <div
+                        className="project-modal-link-group"
+                        style={
+                            modal
+                                ? { visibility: 'visible' }
+                                : { visibility: 'hidden' }
+                        }
+                    >
                         <a href={gitHubLink} target="_blank" rel="noreferrer">
                             GitHub
                         </a>
