@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.c5e3d21f.chunk.css",
-    "main.js": "/my-portfolio/static/js/main.24dbc52b.chunk.js",
-    "main.js.map": "/my-portfolio/static/js/main.24dbc52b.chunk.js.map",
+    "main.css": "/my-portfolio/static/css/main.359d238a.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.39e36734.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.39e36734.chunk.js.map",
     "runtime-main.js": "/my-portfolio/static/js/runtime-main.9bc2dc3f.js",
     "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.9bc2dc3f.js.map",
     "static/css/2.a1596f27.chunk.css": "/my-portfolio/static/css/2.a1596f27.chunk.css",
-    "static/js/2.f296d428.chunk.js": "/my-portfolio/static/js/2.f296d428.chunk.js",
-    "static/js/2.f296d428.chunk.js.map": "/my-portfolio/static/js/2.f296d428.chunk.js.map",
+    "static/js/2.de9dc0ee.chunk.js": "/my-portfolio/static/js/2.de9dc0ee.chunk.js",
+    "static/js/2.de9dc0ee.chunk.js.map": "/my-portfolio/static/js/2.de9dc0ee.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
     "static/css/2.a1596f27.chunk.css.map": "/my-portfolio/static/css/2.a1596f27.chunk.css.map",
-    "static/css/main.c5e3d21f.chunk.css.map": "/my-portfolio/static/css/main.c5e3d21f.chunk.css.map",
-    "static/js/2.f296d428.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.f296d428.chunk.js.LICENSE.txt",
+    "static/css/main.359d238a.chunk.css.map": "/my-portfolio/static/css/main.359d238a.chunk.css.map",
+    "static/js/2.de9dc0ee.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.de9dc0ee.chunk.js.LICENSE.txt",
+    "static/media/3dprint.ad978600.svg": "/my-portfolio/static/media/3dprint.ad978600.svg",
+    "static/media/cat1.d0be8574.jpg": "/my-portfolio/static/media/cat1.d0be8574.jpg",
+    "static/media/cat2.1c1a1168.jpg": "/my-portfolio/static/media/cat2.1c1a1168.jpg",
+    "static/media/cat3.f9df51ca.jpg": "/my-portfolio/static/media/cat3.f9df51ca.jpg",
     "static/media/hangman.c9b40e7d.jpg": "/my-portfolio/static/media/hangman.c9b40e7d.jpg",
+    "static/media/hoop.e1c72e17.svg": "/my-portfolio/static/media/hoop.e1c72e17.svg",
     "static/media/jcellio.71214ec2.jpg": "/my-portfolio/static/media/jcellio.71214ec2.jpg",
     "static/media/jchat.232d3ffc.jpg": "/my-portfolio/static/media/jchat.232d3ffc.jpg",
     "static/media/profile.07babaa1.jpg": "/my-portfolio/static/media/profile.07babaa1.jpg",
@@ -21,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.9bc2dc3f.js",
     "static/css/2.a1596f27.chunk.css",
-    "static/js/2.f296d428.chunk.js",
-    "static/css/main.c5e3d21f.chunk.css",
-    "static/js/main.24dbc52b.chunk.js"
+    "static/js/2.de9dc0ee.chunk.js",
+    "static/css/main.359d238a.chunk.css",
+    "static/js/main.39e36734.chunk.js"
   ]
 }
