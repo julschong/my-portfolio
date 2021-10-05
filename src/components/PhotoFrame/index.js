@@ -34,7 +34,11 @@ const PhotoFrame = () => {
                 style={counter % 3 >= 0 ? { opacity: 1 } : undefined}
             >
                 <div className="inner-frame">
-                    <img className="frame-picture" src={cat1} alt="cat"></img>
+                    <img
+                        className="frame-picture"
+                        src={cat1}
+                        alt="cat named Marble on a pink blanking looking at the camara"
+                    ></img>
                 </div>
             </div>
             <div
@@ -42,7 +46,11 @@ const PhotoFrame = () => {
                 style={counter % 3 >= 1 ? { opacity: 1 } : undefined}
             >
                 <div className="inner-frame">
-                    <img className="frame-picture" src={cat2} alt="cat"></img>
+                    <img
+                        className="frame-picture"
+                        src={cat2}
+                        alt="cats named Marble and Gravy in the same cat bed looking at the camara"
+                    ></img>
                 </div>
             </div>
             <div
@@ -50,7 +58,11 @@ const PhotoFrame = () => {
                 style={counter % 3 >= 2 ? { opacity: 1 } : undefined}
             >
                 <div className="inner-frame">
-                    <img className="frame-picture" src={cat3} alt="cat"></img>
+                    <img
+                        className="frame-picture"
+                        src={cat3}
+                        alt="cat named Foosh on the bed wearing a hand crocheted baby hat"
+                    ></img>
                 </div>
             </div>
         </>
