@@ -44,7 +44,7 @@ const Skill = (props) => {
                     isMobile
                 )} animate__delay-1s`}
             >
-                Language and Tools I have worked with
+                Languages and Tools I have worked with
             </h2>
             <div className="skill-list">
                 {skills.map((el, i) => (
