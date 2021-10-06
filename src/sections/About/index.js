@@ -67,8 +67,8 @@ const About = forwardRef((props, ref) => {
                     in 2019 I had a chance to use SQL at work and fell in love
                     with solving complex problems with code. From that
                     experience on, I began learning programming on my own. I
-                    developed a new goal to work towards becoming a fullstack
-                    developer, and I haven't gone a day without coding and
+                    developed a new goal to work towards becoming a Fullstack
+                    Developer, and I haven't gone a day without coding and
                     learning ever since!
                 </p>
             </div>

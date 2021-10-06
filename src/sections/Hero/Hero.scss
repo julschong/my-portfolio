@@ -66,9 +66,11 @@
 
     .hero-hobby-container {
         .hero-hobby {
+            font-size: calc(var(--font-size-md) - 6px);
             line-height: var(--font-size-lg);
             position: relative;
             width: fit-content;
+            margin-left: 20px;
             background-image: var(--color-gradient-rainbow);
             background-size: 0% 3px;
             background-repeat: no-repeat;

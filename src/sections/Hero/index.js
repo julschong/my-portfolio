@@ -33,7 +33,7 @@ const Hero = forwardRef(({ aboutRef }, ref) => {
                 I'm <span className="hero-text-name">Julius Lee</span>
                 .
                 <br />
-                <span>I'm a passionate, self-taught fullstack developer!</span>
+                <span>I'm a passionate, self-taught Fullstack Developer!</span>
                 <br />
                 <div className="hero-subtext animate__animated animate__fadeIn animate__delay-3s">
                     I also love to

@@ -15,7 +15,7 @@ const PhotoFrame = () => {
                     setCounter((s) => {
                         return s + 1;
                     }),
-                3000
+                2000
             );
             setInternalNum(t);
         }
@@ -37,7 +37,7 @@ const PhotoFrame = () => {
                     <img
                         className="frame-picture"
                         src={cat1}
-                        alt="cat named Marble on a pink blanking looking at the camara"
+                        alt="cat named Marble on a pink blanking looking at the camera"
                     ></img>
                 </div>
             </div>
@@ -49,7 +49,7 @@ const PhotoFrame = () => {
                     <img
                         className="frame-picture"
                         src={cat2}
-                        alt="cats named Marble and Gravy in the same cat bed looking at the camara"
+                        alt="cats named Marble and Gravy in the same cat bed looking at the camera"
                     ></img>
                 </div>
             </div>
