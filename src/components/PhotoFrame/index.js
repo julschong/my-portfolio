@@ -15,7 +15,7 @@ const PhotoFrame = () => {
                     setCounter((s) => {
                         return s + 1;
                     }),
-                2000
+                1500
             );
             setInternalNum(t);
         }
