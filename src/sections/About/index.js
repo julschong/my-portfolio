@@ -47,7 +47,7 @@ const About = forwardRef((props, ref) => {
                     <p className="profile-caption">
                         My name is Julius Lee.
                         <br />
-                        I'm an aspiring self movtivated Fullstack Developer.
+                        I'm an aspiring self motivated Fullstack Developer.
                     </p>
                 </div>
                 <p
@@ -62,7 +62,7 @@ const About = forwardRef((props, ref) => {
                     <br />I graduated from University of California, Riverside
                     with a degree in Electrical Engineering in 2015. That's
                     where I first learned programming with C++ and C, and I also
-                    worked on quite a bit of Microcontroller Programming. With
+                    worked on quite a bit of Micro-controller Programming. With
                     my degree, I began my career as a Procurement Engineer, but
                     in 2019 I had a chance to use SQL at work and fell in love
                     with solving complex problems with code. From that
